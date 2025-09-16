@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support Chat - Your Campus Companion</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">💚</div>
+                    <h1>Campus Mental Health Support</h1>
+                </div>
+                <p class="subtitle">A safe space to talk about your feelings and get support</p>
+            </div>
+        </header>
+
+        <!-- Crisis Banner (hidden by default) -->
+        <div id="crisis-banner" class="crisis-banner hidden">
+            <div class="crisis-content">
+                <span class="crisis-icon">🚨</span>
+                <div class="crisis-text">
+                    <strong>Need immediate help?</strong>
+                    <p>Crisis Text Line: Text HOME to 741741 | National Lifeline: 988</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <main class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hi there! I'm here to listen and support you through whatever you're going through. I understand that being a student can be challenging - whether you're dealing with academic stress, social pressures, homesickness, or just need someone to talk to.</p>
+                        <p>This is a safe, non-judgmental space. What's on your mind today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator hidden" id="typingIndicator">
+                <div class="message bot-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Type your message here... Press Enter to send"
+                    rows="1"
+                    maxlength="1000"
+                ></textarea>
+                <button id="sendButton" class="send-button" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-actions">
+                <button id="resetButton" class="reset-button">Start New Conversation</button>
+                <div class="character-count">
+                    <span id="charCount">0</span>/1000
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Resources -->
+        <footer class="support-resources">
+            <details>
+                <summary>🆘 Emergency Resources & Campus Support</summary>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h4>🚨 Crisis Support</h4>
+                        <p><strong>National Suicide Prevention Lifeline:</strong> 988</p>
+                        <p><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
+                        <p><strong>Emergency:</strong> 911</p>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🏫 Campus Resources</h4>
+                        <p><strong>Counseling Center:</strong> Contact your campus counseling services</p>
+                        <p><strong>Campus Security:</strong> Call your campus emergency number</p>
+                        <p><strong>Student Health:</strong> Visit your campus health center</p>
+                    </div>
+                    <div class="resource-card">
+                        <h4>📱 Online Support</h4>
+                        <p><strong>BetterHelp for Students:</strong> Online therapy</p>
+                        <p><strong>Headspace:</strong> Meditation and mindfulness</p>
+                        <p><strong>NAMI:</strong> Mental health information and support</p>
+                    </div>
+                </div>
+            </details>
+        </footer>
+    </div>
+
+    <script src="../static/js/chat.js"></script>
+</body>
+</html>
