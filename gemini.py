@@ -2,7 +2,8 @@ import json
 import logging
 import os
 
-from google import genai
+# from google import genai
+import google
 from google.genai import types
 from pydantic import BaseModel
 from typing import List, Dict, Optional
@@ -16,7 +17,7 @@ from typing import List, Dict, Optional
 # The SDK was recently renamed from google-generativeai to google-genai. This file reflects the new name and the new APIs.
 
 # This API key is from Gemini Developer API Key, not vertex AI API Key
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+client = google.genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 
 def mental_health_chat(user_message: str, conversation_history: Optional[List[Dict[str, str]]] = None) -> str:
