@@ -74,7 +74,7 @@ def mental_health_chat(user_message: str, conversation_history: Optional[List[Di
             contents=content_parts,
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
-                temperature=0.8,
+                temperature=0.7,
                 max_output_tokens=600
             )
         )
